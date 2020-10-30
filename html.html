@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <!--Import Google Icon Font-->
+      <link href= 
+         "https://fonts.googleapis.com/icon?family=Material+Icons"
+         rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href= 
+         "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+      <!--Let browser know website is  
+         optimized for mobile-->
+      <meta name="viewport" content= 
+         "width=device-width,  
+         initial-scale=1.0" />
+      <style>
+         .container {
+         position: relative;
+         width: 100%;
+         max-width: 400px;
+         }
+         .container img {
+         width: 100%;
+         height: auto;
+         }
+         .btn {
+         position: absolute;
+         background-color: #555;
+         color: white;
+         font-size: 16px;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         text-align: center;
+         }
+         .btn:hover {
+         background-color: black;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="green center">
+         <h2>Online Shopping Store</h2>
+      </div>
+      <div class="row">
+         <div class="col s3 green center" style="height:500px">
+            <img id="image1" src="image1.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Pink Printed Tunic Top</h5>
+            <button class="btn" onclick="blacklist2()">Blacklist</button>
+         </div>
+         <div class="col s3 green darken-3 center" style="height:500px">
+            <img id="image2" src="image2.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Black Printed Tunic Top</h5>
+            <button class="btn" onclick="blacklist2()">Blacklist</button>
+         </div>
+         <div class="col s3 green center" style="height:500px">
+            <img id="image3" src="image3.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Green Maxi Top</h5>
+            <button class="btn" onclick="blacklist3()">Blacklist</button> 
+			</div>
+         <div class="col s3 green darken-3 center" style="height:500px">
+            <img id="image4" src="image4.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Yellow Printed Tunic Top</h5>
+            <button class="btn" onclick="blacklist2()">Blacklist</button>
+			</div>
+      </div>
+      <div class="row">
+         <div class="col s3 green darken-3 center" style="height:500px">
+            <img id="image5" src="image5.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Blue Cami Top</h5>
+            <button class="btn" onclick="blacklist1()">Blacklist</button>
+			</div>
+         <div class="col s3 green center" style="height:500px">
+            <img id="image6" src="image6.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Red Maxi Top</h5>
+            <button class="btn" onclick="blacklist3()">Blacklist</button>
+			</div>
+         <div class="col s3 green darken-3 center" style="height:500px">
+            <img id="image7"src="image7.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Purple Cami Top</h5>
+            <button class="btn" onclick="blacklist1()">Blacklist</button>
+			</div>
+         <div class="col s3 green center" style="height:500px">
+            <img id="image8"src="image8.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Blue Wrap Top</h5>
+            <button class="btn" onclick="blacklist4()">Blacklist</button>
+			</div>
+      </div>
+      <div class="row">
+         <div class="col s3 green center" style="height:500px">
+            <img id="image9" src="image9.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Mixed Maxi Top</h5>
+            <button class="btn" onclick="blacklist3()">Blacklist</button>                  </div>
+         <div class="col s3 green darken-3 center" style="height:500px">
+            <img id="image10"src="image10.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Line Cami Top</h5>
+            <button class="btn" onclick="blacklist1()">Blacklist</button>                  </div>
+         <div class="col s3 green center" style="height:500px">
+            <img id="image11" src="image11.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>Cross Wrap Top</h5>
+            <button class="btn" onclick="blacklist4()">Blacklist</button>                  </div>
+         <div class="col s3 green darken-3 center" style="height:500px">
+            <img id="image12" src="image12.jpg" alt="Snow" style="width:100%; padding-top:10px; height:80%"><br>
+            <h5>White Wrap Top</h5>
+            <button class="btn" onclick="blacklist4()">Blacklist</button>         
+         </div>
+      </div>
+      <!-- Compiled and minified JavaScript -->
+      <script src= 
+         "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"> </script> 
+      <script> 
+         function blacklist1(){ 
+         	document.getElementById('image10').src="blacklisted.jpeg"; 
+         	document.getElementById('image7').src="blacklisted.jpeg"; 
+         	document.getElementById('image5').src="blacklisted.jpeg"; 
+         } 
+         function blacklist2(){ 
+         	document.getElementById('image1').src="blacklisted.jpeg"; 
+         	document.getElementById('image2').src="blacklisted.jpeg"; 
+         	document.getElementById('image4').src="blacklisted.jpeg"; 
+         } 
+         function blacklist3(){ 
+         	document.getElementById('image9').src="blacklisted.jpeg"; 
+         	document.getElementById('image3').src="blacklisted.jpeg"; 
+         	document.getElementById('image6').src="blacklisted.jpeg"; 
+         } 
+		 function blacklist4(){ 
+         	document.getElementById('image11').src="blacklisted.jpeg"; 
+         	document.getElementById('image8').src="blacklisted.jpeg"; 
+         	document.getElementById('image12').src="blacklisted.jpeg"; 
+         }
+      </script>
+   </body>
+</html>
