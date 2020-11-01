@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript and DOM</title>
+	<style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;
+          }
+   h1{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    font-size: 30mm;
+    color: red;
+}
+        
+        /* Button used to open the chat form - fixed at the bottom of the page */
+        .open-button {
+          background-color: #555;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          opacity: 0.8;
+          position: fixed;
+          bottom: 23px;
+          right: 28px;
+          width: 280px;
+        }
+        
+        /* The popup chat - hidden by default */
+        .chat-popup {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          right: 15px;
+          border: 3px solid #f1f1f1;
+          z-index: 9;
+        }
+        
+        /* Add styles to the form container */
+        .form-container {
+          max-width: 300px;
+          padding: 10px;
+          background-color: skyblue;
+        }
+        
+        /* Full-width textarea */
+        .form-container textarea {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+          resize: none;
+          min-height: 200px;
+        }
+        
+        /* When the textarea gets focus, do something */
+        .form-container textarea:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        /* Set a style for the submit/send button */
+        .form-container .btn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          margin-bottom:10px;
+          opacity: 0.8;
+        }
+        
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+          background-color: red;
+        }
+        
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+          opacity: 1;
+        }
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: red;
+}
+td{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: whitesmoke;
+}
+
+tr:nth-child(even) {
+  background-color: skyblue;
+}
+ </style>
+</head>
+<body style="background-color: darkblue;">
+<h1>Nearby Recycling Areas</h1>
+<table>
+    <tr>
+      <th>Recyclers</th>
+      <th>Address</th>
+      <th>contact</th>
+      <th>Live chat</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Ranchi</td>
+      <td>8780991312</td>
+      <td><button onclick="openForm()">Chat</button></td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Patna</td>
+      <td>9345678903</td>
+      <td><button onclick="openForm()">Chat</button></td>
+    </tr>
+    <tr>
+      <td>Ernst Handel</td>
+      <td>Hyderabad</td>
+      <td>7890908754</td>
+      <td><button onclick="openForm()">Chat</button></td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Bangalore</td>
+      <td>8790221314</td>
+      <td><button onclick="openForm()">Chat</button></td>
+    </tr>
+    <tr>
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Thiruvananthapuram</td>
+      <td>8790345678</td>
+      <td><button onclick="openForm()">Chat</button></td>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Mumbai</td>
+      <td>3214557890</td>
+      <td><button onclick="openForm()">Chat</button></td>
+    </tr>
+  </table>
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h2>Chat</h2>
+  
+      <label for="msg"><b>Message</b></label>
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+  
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  
+  <script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+
+</body>
+</html>

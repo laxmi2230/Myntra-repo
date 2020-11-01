@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demopage</title>
+	<style>
+html {
+	background-color: black;
+  box-sizing: border-box;
+  color: red;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+  background-color: white;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+	<h1>This page refers to  the link containing the purchase page of that particular item here bangles</h1>
+	<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="images/bangles.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Silver Bangles</h2>
+        
+        <p>Price Rs.350.</p>
+        <p>Dealer:Sridham Dealers</p>
+        <p><button class="button">Order Now</button></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
